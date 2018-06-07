@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { CarsService } from './services/cars.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -8,6 +9,7 @@ import { CarHomeComponent } from './components/car-home/car-home.component';
   imports: [
     CommonModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   declarations: [CarHomeComponent],
   exports: [CarHomeComponent],

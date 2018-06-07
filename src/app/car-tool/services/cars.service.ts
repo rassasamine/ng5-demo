@@ -11,4 +11,7 @@ export class CarsService {
 
   all = () => this.httpClient.get<Car[]>(this.baseUrl).toPromise();
 
+  insert = (car: Car) => this.httpClient.post<number>(this.baseUrl, car).toPromise();
+
+  delete = (carId: number) => this.httpClient.delete<Car>(this.baseUrl + '/' + encodeURIComponent(carId.toString())).toPromise();
 }
